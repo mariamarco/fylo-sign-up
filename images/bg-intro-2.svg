@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="342px" height="342px" viewBox="0 0 342 342" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-intro-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="342" height="342"></rect>
+        <linearGradient x1="14.569%" y1="-6.457%" x2="132.964%" y2="153.753%" id="linearGradient-3">
+            <stop stop-color="#110A6D" offset="0%"></stop>
+            <stop stop-color="#BDBAFA" offset="100%"></stop>
+            <stop stop-color="#BDBAFA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg-intro-2">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#D8D8D8" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="bg-intro" mask="url(#mask-2)" fill="url(#linearGradient-3)">
+                <g transform="translate(-11.000000, 0.000000)" id="Shape">
+                    <path d="M0,376.28 C67.572,343.606 124.62,343.606 171.144,376.28 C240.931,425.293 312.702,462.791 413.567,435.452 C480.811,417.226 480.811,272.075 413.567,0 L0,0 L0,376.28 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

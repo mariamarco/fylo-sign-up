@@ -1,0 +1,351 @@
+/* General Styles */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700');
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+
+/* Particles */
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+}
+
+
+/* Header Styles */
+
+.header {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.fab,
+.fas {
+  color: white;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fab:hover,
+.fas:hover {
+  color: #28f2ba;
+}
+
+.logo {
+  width: 80%;
+}
+
+.logo-black {
+  display: none;
+}
+
+
+/* Illustration Styles */
+
+.illustration-group {
+  background: url(../images/bg-intro.svg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-illustration {
+  height: 65vw;
+}
+
+
+/* Content Styles */
+
+.content {
+  padding: 0 2rem;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 0.9rem;
+  color: grey;
+  line-height: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.policy a {
+  color: black;
+  font-size: 0.7rem;
+}
+
+.policy a:hover {
+  color: #28f2ba;
+}
+
+.policy {
+  text-align: right;
+  padding-bottom: 3rem;
+}
+
+
+/* Form Styles */
+
+.input {
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  background-color: none;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: #dddddd;
+  opacity: 1;
+}
+
+input:focus {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: #28f2ba;
+}
+
+.submit {
+  background-color: #06d79d;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  padding: 0.7rem 3rem;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: #28f2ba;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+  .navigation {
+    padding: 3rem;
+  }
+  .content {
+    padding: 0 3rem;
+  }
+  .illustration-group {
+    height: 75vh;
+    margin-bottom: 2rem;
+  }
+  .item-illustration {
+    height: 50vw;
+  }
+}
+
+@media (min-width: 800px) {
+  /* General Styles */
+  .container {
+    height: 100%;
+  }
+  .header {
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
+  .illustration-group {
+    grid-area: illustration;
+  }
+  .header {
+    grid-area: header;
+  }
+  .content {
+    grid-area: content;
+    z-index: 2000;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "illustration header" "illustration content";
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: auto 1fr;
+  }
+  .content,
+  .navigation {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  /* Header Styles */
+  .fab,
+  .fas {
+    color: black;
+  }
+  .logo-white {
+    display: none;
+  }
+  .logo-black {
+    display: block;
+  }
+  /* Content Illustration */
+  .illustration-group {
+    background: url(../images/bg-intro-2.svg);
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 0;
+  }
+  .item-illustration {
+    height: 30vw;
+  }
+  /* Content Styles */
+  .content {
+    margin-top: 6rem;
+  }
+  h1 {
+    font-size: 2.3rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 4rem;
+  }
+  /* Form Styles */
+  .input {
+    border: none;
+    padding: 1.3rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.05), 0px 8px 13px rgba(0, 0, 0, 0.1);
+    margin-right: 0.7rem;
+  }
+  .submit {
+    padding: 1.3rem 0rem;
+    font-size: 1.1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05), 0px 8px 13px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* General Styles */
+  .content {
+    margin-top: 8rem;
+  }
+  /* Form Styles */
+  .input {
+    width: 67%;
+    margin-right: 0.7rem;
+  }
+  .submit {
+    width: 30%;
+  }
+}
